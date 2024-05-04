@@ -12,9 +12,9 @@ public class MenuSelecaoMoeda {
 
     public Moeda selecionarMoeda() {
         System.out.println("Escolha a unidade monetária:");
-        System.out.println("1- Real:");
-        System.out.println("2- Dólar:");
-        System.out.println("3- Euro:");
+        System.out.println("1- Real");
+        System.out.println("2- Dólar");
+        System.out.println("3- Euro");
         System.out.println("4- Retornar ao menu anterior");
 
         int opcaoMoeda = opcao.nextInt();

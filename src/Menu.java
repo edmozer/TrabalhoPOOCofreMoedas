@@ -11,6 +11,7 @@ public class Menu {
     }
 
     public void telaPrincipal() {
+        System.out.println("-----------------------");
         System.out.println("COFRE DE MOEDAS:");
         System.out.println("-----------------------");
         System.out.println("1 - Adicionar Moeda");
@@ -47,6 +48,7 @@ public class Menu {
             case 4:
                 CalcularValorTotal calculadora = new CalcularValorTotal(cofrinho);
                 calculadora.mostrarValorTotal();
+                telaPrincipal();
                 break;
 
             case 5:
