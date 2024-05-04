@@ -19,7 +19,7 @@ public class Menu {
         System.out.println("4 - Calcular valor total convertido para real");
         System.out.println("5 - Finalizar");
         System.out.println("Selecione uma opção: ");
-        System.out.println("-----------------------");
+
         int selecao = opcao.nextInt();
 
         switch (selecao) {
@@ -45,7 +45,8 @@ public class Menu {
                 break;
 
             case 4:
-
+                CalcularValorTotal calculadora = new CalcularValorTotal(cofrinho);
+                calculadora.mostrarValorTotal();
                 break;
 
             case 5:
@@ -59,4 +60,5 @@ public class Menu {
         }
 
     }
+
 }
