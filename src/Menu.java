@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -11,47 +12,30 @@ public class Menu {
     }
 
     public void telaPrincipal() {
-        System.out.println("COFRINHO:");
-        System.out.println("1- Adicionar Moeda:");
-        System.out.println("2- Remover Moeda");
-        System.out.println("3- Listar Moedas:");
-        System.out.println("4- Calcular valor total convertido para real:");
-        System.out.println("5- Encerrar");
+        System.out.println("COFRE DE MOEDAS:");
+        System.out.println("1 - Adicionar Moeda:");
+        System.out.println("2 - Remover Moeda");
+        System.out.println("3 - Listar Moedas:");
+        System.out.println("4 - Calcular valor total convertido para real:");
+        System.out.println("5 - Finalizar");
 
         int selecao = opcao.nextInt();
 
-        switch(selecao) {
+        switch (selecao) {
             case 1:
-                System.out.println("Escolha a moeda:");
-                System.out.println("1- Real:");
-                System.out.println("2- Dolar:");
-                System.out.println("3- Euro:");
-                int opcaoMoeda = opcao.nextInt();
-
-                System.out.println("Digite  o valor: ");
-                double valorMoeda = opcao.nextDouble();
-
-                Moeda moeda = null;
-
-                if (opcaoMoeda == 1) {
-                    moeda = new Real(valorMoeda);
-
-                }else if (opcaoMoeda ==2) {
-                    moeda	= new Dollar(valorMoeda);
-
-                }else if (opcaoMoeda == 3) {
-                    moeda = new Euro(valorMoeda);
-
-                }else {
-                    System.out.println("Opcao Invalida");
+                MenuSelecaoMoeda menuSelecaoMoeda = new MenuSelecaoMoeda(opcao);
+                Moeda moedaSelecionada = menuSelecaoMoeda.selecionarMoeda();
+                if (menuSelecaoMoeda.deveRetornarMenuPrincipal()) {
                     telaPrincipal();
+                    return;
                 }
-
-                cofrinho.adicionar(moeda);
+                cofrinho.adicionar(moedaSelecionada);
                 telaPrincipal();
                 break;
 
             case 2:
+                RemoverMoeda removerMoeda = new RemoverMoeda(opcao, cofrinho);
+                removerMoeda.removerMoeda();
                 break;
 
             case 3:
@@ -60,18 +44,17 @@ public class Menu {
                 break;
 
             case 4:
+                // Implement functionality for calculating total value
                 break;
 
             case 5:
-                System.out.println("Programa encerrado");
+                System.out.println("Operação encerrada.");
                 break;
 
             default:
-                System.out.println("Opcao Invalida");
+                System.out.println("Opção Inválida. Tente novamente.");
                 telaPrincipal();
                 break;
         }
-
-
     }
 }

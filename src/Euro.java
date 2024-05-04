@@ -9,7 +9,7 @@ public class Euro extends Moeda{
     }
 
     public double converter() {
-        return this.valor * 5.48;
+        return this.valor * 5.30;
     }
 
 }
