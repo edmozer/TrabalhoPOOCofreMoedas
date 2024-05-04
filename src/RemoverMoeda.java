@@ -16,7 +16,6 @@ public class RemoverMoeda {
             return;
         }
 
-        // Print list of coins with indices starting from 1
         for (int i = 1; i <= cofrinho.getListaMoeda().size(); i++) {
             Moeda moeda = cofrinho.getListaMoeda().get(i - 1);
             System.out.println("ID: " + i);
@@ -32,7 +31,7 @@ public class RemoverMoeda {
             return;
         }
 
-        cofrinho.removerMoeda(indice - 1); // Adjust index for array access
+        cofrinho.removerMoeda(indice - 1);
         System.out.println("Moeda removida com sucesso.");
     }
 }

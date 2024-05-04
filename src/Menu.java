@@ -13,12 +13,14 @@ public class Menu {
 
     public void telaPrincipal() {
         System.out.println("COFRE DE MOEDAS:");
-        System.out.println("1 - Adicionar Moeda:");
+        System.out.println("-----------------------");
+        System.out.println("1 - Adicionar Moeda");
         System.out.println("2 - Remover Moeda");
-        System.out.println("3 - Listar Moedas:");
-        System.out.println("4 - Calcular valor total convertido para real:");
+        System.out.println("3 - Listar Moedas");
+        System.out.println("4 - Calcular valor total convertido para real");
         System.out.println("5 - Finalizar");
-
+        System.out.println("Selecione uma opção: ");
+        System.out.println("-----------------------");
         int selecao = opcao.nextInt();
 
         switch (selecao) {
@@ -44,7 +46,7 @@ public class Menu {
                 break;
 
             case 4:
-                // Implement functionality for calculating total value
+
                 break;
 
             case 5:
