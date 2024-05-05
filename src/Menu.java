@@ -12,7 +12,7 @@ public class Menu {
 
     public void telaPrincipal() {
         System.out.println("==================================");
-        System.out.println("      BANCO DA QUALIDADE");
+        System.out.println("        BANCO DA QUALIDADE");
         System.out.println("==================================");
         System.out.println("1 - Adicionar valor");
         System.out.println("2 - Remover valor");

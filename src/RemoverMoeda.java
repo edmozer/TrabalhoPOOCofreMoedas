@@ -35,6 +35,6 @@ public class RemoverMoeda {
         }
 
         cofrinho.removerMoeda(indice - 1);
-        System.out.println("Moeda removida com sucesso.");
+        System.out.println("Valor removido com sucesso.");
     }
 }

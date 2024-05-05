@@ -17,7 +17,8 @@ public class CalcularValorTotal {
 
     public void mostrarValorTotal() {
         double valorTotal = calcularValorTotal();
-        System.out.println("Valor total em reais é: " + valorTotal);
+        String valorFormatado = String.format("%.2f", valorTotal);
+        System.out.println("Valor total em reais é: R$ " + valorFormatado);
         System.out.println("");
         System.out.println("Retornando ao menu principal...");
         System.out.println("");

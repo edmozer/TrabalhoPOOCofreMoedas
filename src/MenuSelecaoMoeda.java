@@ -55,12 +55,26 @@ public class MenuSelecaoMoeda {
     }
 
     private double obterValorMoeda() {
-        System.out.println("Digite a quantidade: ");
-        double valor = opcao.nextDouble();
+        double valor = 0;
+        boolean entradaValida = false;
+
+        while (!entradaValida) {
+            System.out.println("Digite a quantidade: ");
+
+            if (opcao.hasNextDouble()) {
+                valor = opcao.nextDouble();
+                entradaValida = true;
+            } else {
+                System.out.println("Entrada inválida. Por favor, digite apenas números.");
+                opcao.next();
+            }
+        }
+
         System.out.println("Valor registrado com sucesso.");
         System.out.println("Redirecionando ao menu principal...");
         return valor;
     }
+
 
     public boolean deveRetornarMenuPrincipal() {
         return voltarMenuPrincipal;
