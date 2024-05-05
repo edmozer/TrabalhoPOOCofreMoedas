@@ -15,7 +15,13 @@ public class MenuSelecaoMoeda {
         System.out.println("1- Real");
         System.out.println("2- Dólar");
         System.out.println("3- Euro");
-        System.out.println("4- Retornar ao menu anterior");
+        System.out.println("4- Libra Esterlina (Inglaterra)");
+        System.out.println("5- Iene (Japão)");
+        System.out.println("6- Franco Suíço (Suíça)");
+        System.out.println("7- Yuan (China)");
+        System.out.println("8- Peso Argentino (Argentina)");
+        System.out.println("9- Rublo (Rússia)");
+        System.out.println("10- Retornar ao menu anterior");
 
         int opcaoMoeda = opcao.nextInt();
 
@@ -23,10 +29,22 @@ public class MenuSelecaoMoeda {
             case 1:
                 return new Real(obterValorMoeda());
             case 2:
-                return new Dollar(obterValorMoeda());
+                return new Dolar(obterValorMoeda());
             case 3:
                 return new Euro(obterValorMoeda());
             case 4:
+                return new LibraEsterlina(obterValorMoeda());
+            case 5:
+                return new Iene(obterValorMoeda());
+            case 6:
+                return new FrancoSuico(obterValorMoeda());
+            case 7:
+                return new Yuan(obterValorMoeda());
+            case 8:
+                return new PesoArgentino(obterValorMoeda());
+            case 9:
+                return new Rublo(obterValorMoeda());
+            case 10:
                 voltarMenuPrincipal = true;
                 return null;
             default:

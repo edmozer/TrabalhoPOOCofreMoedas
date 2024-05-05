@@ -1,0 +1,2 @@
+public class Rublo {
+}
