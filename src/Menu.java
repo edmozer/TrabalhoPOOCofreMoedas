@@ -18,7 +18,8 @@ public class Menu {
         System.out.println("2 - Remover Moeda");
         System.out.println("3 - Listar Moedas");
         System.out.println("4 - Calcular valor total convertido para real");
-        System.out.println("5 - Finalizar");
+        System.out.println("5 - Resetar valores");
+        System.out.println("6 - Finalizar");
         System.out.println("Selecione uma opção: ");
 
         int selecao = opcao.nextInt();
@@ -52,8 +53,14 @@ public class Menu {
                 break;
 
             case 5:
+                cofrinho.resetarValores();
+                telaPrincipal();
+                break;
+
+            case 6:
                 System.out.println("Operação encerrada.");
                 break;
+
 
             default:
                 System.out.println("Opção Inválida. Tente novamente.");

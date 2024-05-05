@@ -23,6 +23,11 @@ public class Cofrinho {
         }
     }
 
+    public void resetarValores() {
+        listaMoeda.clear();
+        System.out.println("Valores resetados.");
+    }
+
     public ArrayList<Moeda> getListaMoeda() {
         return listaMoeda;
     }
