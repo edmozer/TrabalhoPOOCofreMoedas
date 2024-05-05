@@ -11,6 +11,7 @@ public class MenuSelecaoMoeda {
     }
 
     public Moeda selecionarMoeda() {
+        System.out.println("____________________________________");
         System.out.println("Escolha a unidade monetária:");
         System.out.println("1 - Real (Brasil)");
         System.out.println("2 - Dólar (Estados Unidos)");
@@ -21,7 +22,7 @@ public class MenuSelecaoMoeda {
         System.out.println("7 - Yuan (China)");
         System.out.println("8 - Peso Argentino (Argentina)");
         System.out.println("9 - Rublo (Rússia)");
-        System.out.println("10 - Retornar ao menu anterior");
+        System.out.println("10 - Cancelar e retornar ao menu anterior");
 
         int opcaoMoeda = opcao.nextInt();
 
@@ -55,7 +56,10 @@ public class MenuSelecaoMoeda {
 
     private double obterValorMoeda() {
         System.out.println("Digite a quantidade: ");
-        return opcao.nextDouble();
+        double valor = opcao.nextDouble();
+        System.out.println("Valor registrado com sucesso.");
+        System.out.println("Redirecionando ao menu principal...");
+        return valor;
     }
 
     public boolean deveRetornarMenuPrincipal() {

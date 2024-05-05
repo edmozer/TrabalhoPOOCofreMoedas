@@ -12,7 +12,10 @@ public class RemoverMoeda {
 
     public void removerMoeda() {
         if (cofrinho.getListaMoeda().isEmpty()) {
-            System.out.println("O cofrinho está vazio.");
+            System.out.println("Não há o que remover.");
+            System.out.println("");
+            System.out.println("Retornando ao menu principal...");
+            System.out.println("");
             return;
         }
 

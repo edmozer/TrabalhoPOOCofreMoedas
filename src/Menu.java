@@ -7,19 +7,20 @@ public class Menu {
 
     public Menu() {
         opcao = new Scanner(System.in);
-        cofrinho = new Cofrinho();
+        cofrinho = new Cofrinho(opcao); // Pass Scanner to Cofrinho constructor
     }
 
     public void telaPrincipal() {
-        System.out.println("-----------------------");
-        System.out.println("COFRE DE MOEDAS:");
-        System.out.println("-----------------------");
-        System.out.println("1 - Adicionar Moeda");
-        System.out.println("2 - Remover Moeda");
-        System.out.println("3 - Listar Moedas");
-        System.out.println("4 - Calcular valor total convertido para real");
-        System.out.println("5 - Resetar valores");
-        System.out.println("6 - Finalizar");
+        System.out.println("==================================");
+        System.out.println("      BANCO DA QUALIDADE");
+        System.out.println("==================================");
+        System.out.println("1 - Adicionar valor");
+        System.out.println("2 - Remover valor");
+        System.out.println("3 - Listar Moedas na conta");
+        System.out.println("4 - Calcular valor total disponível convertido para Real");
+        System.out.println("5 - Mostrar cotação atual de todas as moedas disponíveis");
+        System.out.println("6 - Resetar valores ");
+        System.out.println("7 - Finalizar");
         System.out.println("Selecione uma opção: ");
 
         int selecao = opcao.nextInt();
@@ -39,6 +40,7 @@ public class Menu {
             case 2:
                 RemoverMoeda removerMoeda = new RemoverMoeda(opcao, cofrinho);
                 removerMoeda.removerMoeda();
+                telaPrincipal();
                 break;
 
             case 3:
@@ -53,14 +55,18 @@ public class Menu {
                 break;
 
             case 5:
-                cofrinho.resetarValores();
+                cofrinho.CotacaoMoeda();
                 telaPrincipal();
                 break;
 
             case 6:
-                System.out.println("Operação encerrada.");
+                cofrinho.resetarValores();
+                telaPrincipal();
                 break;
 
+            case 7:
+                System.out.println("Operação encerrada.");
+                break;
 
             default:
                 System.out.println("Opção Inválida. Tente novamente.");
@@ -70,4 +76,10 @@ public class Menu {
 
     }
 
+    private void mostrarCotacaoAtual() {
+        System.out.println("Cotação atual de todas as moedas:");
+        for (Moeda moeda : cofrinho.getListaMoeda()) {
+            System.out.println(moeda.getClass().getSimpleName() + ": " + moeda.converter());
+        }
+    }
 }
