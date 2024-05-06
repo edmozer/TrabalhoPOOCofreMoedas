@@ -14,7 +14,7 @@ public class Menu {
 
     // Metodo para exibir o menu principal
     public void telaPrincipal() {
-        // Exibe o cabeçalho do menu
+        // Exibe o cabecalho do menu
         System.out.println("==================================");
         System.out.println("        BANCO DA QUALIDADE");
         System.out.println("==================================");
@@ -87,13 +87,5 @@ public class Menu {
                 break;
         }
 
-    }
-
-    // Metodo para mostrar a cotação atual de todas as moedas
-    private void mostrarCotacaoAtual() {
-        System.out.println("Cotação atual de todas as moedas:");
-        for (Moeda moeda : cofrinho.getListaMoeda()) {
-            System.out.println(moeda.getClass().getSimpleName() + ": " + moeda.converter());
-        }
     }
 }

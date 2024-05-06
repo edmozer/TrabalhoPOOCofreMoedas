@@ -3,18 +3,23 @@ import java.util.Scanner;
 
 public class Cofrinho {
 
+    // Lista de moedas no cofrinho
     private ArrayList<Moeda> listaMoeda;
+    // Scanner para entrada de dados
     private Scanner scanner;
 
-    public Cofrinho(Scanner scanner) { // Constructor with Scanner argument
+    // Construtor que recebe um objeto Scanner como argumento
+    public Cofrinho(Scanner scanner) {
         this.listaMoeda = new ArrayList<>();
         this.scanner = scanner;
     }
 
+    // Metodo para adicionar uma moeda ao cofrinho
     public void adicionar(Moeda moeda) {
         this.listaMoeda.add(moeda);
     }
 
+    // Metodo para listar as moedas no cofrinho
     public void listagemMoedas() {
         if (listaMoeda.isEmpty()) {
             System.out.println("Não existem valores registrados.");
@@ -30,7 +35,7 @@ public class Cofrinho {
         }
     }
 
-
+    // Metodo para resetar os valores no cofrinho
     public void resetarValores() {
         listaMoeda.clear();
         System.out.println("Deseja enviar todos valores para uma conta em um Paraíso Fiscal? (S/N)");
@@ -48,15 +53,18 @@ public class Cofrinho {
         }
     }
 
+    // Metodo para obter a lista de moedas
     public ArrayList<Moeda> getListaMoeda() {
         return listaMoeda;
     }
 
+    // Metodo para obter a cotação de moedas
     public void CotacaoMoeda() {
         CotacaoMoeda cotacaoMoeda = new CotacaoMoeda();
         cotacaoMoeda.mostrarCotacaoAtual();
     }
 
+    // Metodo para remover uma moeda do cofrinho com base no indice
     public void removerMoeda(int indice) {
         listaMoeda.remove(indice);
     }

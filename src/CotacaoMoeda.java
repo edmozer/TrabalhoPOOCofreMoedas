@@ -9,17 +9,22 @@ import java.net.URL;
 
 public class CotacaoMoeda {
 
+    // Array contendo os codigos das moedas
     private static final String[] CODIGOS_MOEDAS = {"USD", "EUR", "GBP", "JPY", "CHF", "CNY", "ARS", "RUB"};
 
+    // Metodo para exibir a cotacao atual de todas as moedas cadastradas
     public void mostrarCotacaoAtual() {
         System.out.println("=============================================");
         System.out.println("Cotação atual de todas as moedas cadastradas:");
         System.out.println("=============================================");
+        // Loop para cada codigo de moeda
         for (String codigo : CODIGOS_MOEDAS) {
             try {
+                // Busca e exibe a cotacao da moeda
                 double cotacao = buscarCotacaoMoeda(codigo);
                 System.out.println(obterNomeMoeda(codigo) + " (" + codigo + "): R$ " + cotacao);
             } catch (IOException | ParseException e) {
+                // Em caso de erro, exibe uma mensagem
                 System.out.println("Erro ao buscar cotação da moeda " + codigo);
             }
         }
@@ -29,6 +34,7 @@ public class CotacaoMoeda {
         System.out.println("");
     }
 
+    // Metodo para buscar a cotação de uma moeda específica
     private double buscarCotacaoMoeda(String codigoMoeda) throws IOException, ParseException {
         String urlApi = "https://api.exchangerate-api.com/v4/latest/" + codigoMoeda;
         HttpURLConnection con = null;
@@ -51,6 +57,7 @@ public class CotacaoMoeda {
         }
     }
 
+    // Metodo para obter o nome de uma moeda a partir do seu código
     private String obterNomeMoeda(String codigoMoeda) {
         switch (codigoMoeda) {
             case "USD":

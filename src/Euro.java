@@ -19,7 +19,7 @@ public class Euro extends Moeda {
         System.out.println("Euro - " + valor);
     }
 
-    // Método para buscar a taxa de conversão atual do Euro usando uma API
+    // Metodo para buscar a taxa de conversão atual do Euro usando uma API
     private static void atualizarTaxaDeConversao() throws IOException, ParseException {
         URL url = new URL(URL_API);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -34,13 +34,13 @@ public class Euro extends Moeda {
         taxaDeConversao = (double) rates.get("BRL");
     }
 
-    // Método para converter o valor em Euro para outra moeda usando a taxa de conversão atualizada
+    // Metodo para converter o valor em Euro para outra moeda usando a taxa de conversao atualizada
     public double converter() {
         try {
             atualizarTaxaDeConversao();
         } catch (IOException | ParseException e) {
             e.printStackTrace();
-            // Lidar com erros de conexão ou parse do JSON se precisar
+            // Lidar com erros de conexao ou parse do JSON se precisar
         }
         return this.valor * taxaDeConversao;
     }
