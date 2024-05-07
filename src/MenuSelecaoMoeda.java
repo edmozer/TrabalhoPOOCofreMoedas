@@ -18,11 +18,11 @@ public class MenuSelecaoMoeda {
         System.out.println("____________________________________");
         System.out.println("Escolha a unidade monetaria:");
         System.out.println("1 - Real (Brasil)");
-        System.out.println("2 - Dolar (Estados Unidos)");
+        System.out.println("2 - Dólar (Estados Unidos)");
         System.out.println("3 - Euro (Europa)");
         System.out.println("4 - Libra Esterlina (Inglaterra)");
         System.out.println("5 - Iene (Japao)");
-        System.out.println("6 - Franco Suico (Suica)");
+        System.out.println("6 - Franco Suiço (Suiça)");
         System.out.println("7 - Yuan (China)");
         System.out.println("8 - Peso Argentino (Argentina)");
         System.out.println("9 - Rublo (Russia)");

@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -41,7 +42,8 @@ public class Cofrinho {
         System.out.println("Deseja enviar todos valores para uma conta em um Paraíso Fiscal? (S/N)");
         String opcao = scanner.next();
         if (opcao.equalsIgnoreCase("S")) {
-            System.out.println("Todos os valores foram enviados para ********. Seu dinheiro está fora do alcance da Receita Federal.");
+            System.out.println("Todos os valores foram enviados para ********.");
+            System.out.println("Seu dinheiro está fora do alcance da Receita Federal.");
             System.out.println("");
             System.out.println("Retornando ao menu principal...");
             System.out.println("");
